@@ -1,5 +1,22 @@
 function countPositivesSumNegatives(input) {
   //Start coding here
+  if (input.length === 0) {
+    return [];
+  }
+
+  let result = [];
+  let countPosiNum = 0;
+  let sumNegaNum = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      countPosiNum += 1;
+    } else if (input[i] < 0) {
+      sumNegaNum += input[i];
+    }
+  }
+  result = [countPosiNum, sumNegaNum];
+  return result;
 }
 
 let result1 = countPositivesSumNegatives([
